@@ -3,15 +3,20 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net48</TargetFramework>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="NUnit" Version="3.13.2" />
       <PackageReference Include="SimpleInjector" Version="5.3.2" />
       <PackageReference Include="Telegram.Bot" Version="16.0.2" />
     </ItemGroup>
 
     <ItemGroup>
       <None Update="WebSettings.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="FakeBotConfig.xml">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

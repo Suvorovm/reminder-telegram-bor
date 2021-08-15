@@ -1,0 +1,19 @@
+﻿<botConfig>
+    <question id="initQuestion" text="Создасть уведомление ?" handler="commonHandler">
+  
+       <!-- <action actionType="displayKeyboard"/>-->
+
+        <answear id="successAnswer" userAnswear="да yes д y">
+
+            <question id="selectDate"  text="Выберите дату" handler="commonHandler">
+
+            </question>
+        </answear>
+
+        <!--ПОльзовтель ввел хуйню , перезапускаем бота-->
+        <answear id="negativeAnswer" >
+            <action actionType= "restart"/>
+        </answear>
+
+    </question>
+</botConfig>

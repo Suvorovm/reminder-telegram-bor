@@ -13,7 +13,7 @@ namespace Reminder.StateMachine.Model
 
         public AnswerModel GetLast()
         {
-            return _answers.Pop();
+            return _answers.Peek();
         }
 
         public bool IsEmpty()

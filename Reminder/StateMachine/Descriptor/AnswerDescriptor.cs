@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace Reminder.StateMachine.Descriptor
@@ -9,7 +10,8 @@ namespace Reminder.StateMachine.Descriptor
         public string Id { get; set; }
         [XmlElement("question")]
         public QuestionDescriptor QuestionDescriptor { get; set; }
-        [XmlElement("userAnswear")]
+        [XmlAttribute("userAnswear")]
         public List<string> UserAnswer { get; set; }
+
     }
 }

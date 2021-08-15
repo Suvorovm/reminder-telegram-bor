@@ -4,15 +4,17 @@
     {
         private string _questionId;
         private string _userAnswer;
-        private static AnswerModel Create(string questionId, string userAnswer)
+        private string _answerId;
+        public static AnswerModel Create(string questionId, string userAnswer, string answerId)
         {
-            return new AnswerModel(questionId, userAnswer);
+            return new AnswerModel(questionId, userAnswer, answerId);
         }
 
-        private AnswerModel(string questionId, string userAnswer)
+        private AnswerModel(string questionId, string userAnswer, string answerId)
         {
             _questionId = questionId;
             _userAnswer = userAnswer;
+            _answerId = answerId;
         }
 
         public string QuestionId
@@ -22,6 +24,10 @@
         public string UserAnswer
         {
             get { return _userAnswer; }
+        }
+        public string AnswerId
+        {
+            get { return _answerId; }
         }
     }
 }

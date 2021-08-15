@@ -13,16 +13,5 @@ namespace Reminder.StateMachine.Model
         
     }
 
-    public static class HandlerQuestionTypeExtension
-    {
-        private static Dictionary<HandlerQuestionType, IQuestHandler> _handlers = new Dictionary<HandlerQuestionType, IQuestHandler>() {
-                {HandlerQuestionType.COMMON_HANDLER, new CommonHandler()},
-        };
-
-        public static IQuestHandler GetHandler(HandlerQuestionType handlerQuestionType)
-        {
-            return _handlers[handlerQuestionType];
-        }
-    }
 
 }

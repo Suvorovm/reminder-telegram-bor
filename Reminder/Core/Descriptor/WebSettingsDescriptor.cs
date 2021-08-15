@@ -7,5 +7,7 @@ namespace Reminder.Core.Descriptor
     {
         [XmlAttribute("secretKey")]
         public string SecretKey { get; set; }
+        [XmlAttribute("fake")]
+        public bool Fake { get; set; }
     }
 }
